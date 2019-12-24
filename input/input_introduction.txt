@@ -1,0 +1,68 @@
+the introduction of every parameter in the input_time_position.csv
+
+Time: columns 1-6
+1. year, 	unit [year]		range [2020, 2050]
+2. month,	unit [month]		range [1, 12]
+3. day,		unit [day]		range [1,28/29/30/31]
+4. hour,	unit [hour]		range [0,24]
+5. minute,	unit [minute]		range [0,60]
+6. second,	unit [second]		range [0,60]
+
+Position: columns 7-14, center of a figure
+7. ra h, 	unit [h]		range [0,24]
+8. ra m,	unit [minute]		range [0,60]
+9. ra s, 	unit [second]		range [0,60]
+10. dec sign	unit []			range 0:- / 1:+  			
+11. dec d,	unit [degree]		range [0,90]
+12. dec m, 	unit [arc min]		range [0,60]
+13. dec s,	unit [arc sec]		range [0,60]
+14. radius,	unit [degree]		range [0,90]
+
+flag: columns 15-19
+15. flag0: search in Solar system or in BSC catalog?
+		0,			BSC+Solar system
+		1,			BSC
+16. flag1: search in full sky, north, or south?
+		0,			full sky
+		1,			north
+		2,			south
+17. flag2: Vmag < flag2
+		unit [mag]		range <=6.5 (default flag2=6.5)
+18. flag3: include variable source or not?
+		0,			include
+		1,			exclude
+19. flag4: search method
+		0,			square
+		1,			circle	
+		
+wavelength range: columns 20-21
+20. low		unit [A]		range [3000,10000]
+21. high 	unit [A]		range [3000,10000]
+
+Longitude and latitude: 22-23
+22. longitude 	unit [degree]		range [0,360]
+23. latitude	unit [degree]		range [-90,90]
+
+
+how to run 
+install package 
+
+PyAstronomy, 
+photutils, 
+pyproj
+pip install --user https://github.com/matplotlib/basemap/archive/master.zip
+
+
+1. run BSC.py in the path of BSC.py 
+输出文件在 output/fig 和 output/table下
+
+2. run drawmap.py
+地理经纬相关的图
+输出文件在 output/fig/0
+因为默认只输出第一行输入得到的结果
+
+3. run simulate_sky.py
+视场亮星的图
+输出文件在 output/fig/0
+因为默认只输出第一行输入得到的结果
+

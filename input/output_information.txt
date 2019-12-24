@@ -1,0 +1,45 @@
+the introduction of every parameter in the output.csv
+
+1. star_id					star id in BSC catalog
+
+2. name						HD name in BSC catalog(Bright star) or Planet in solar system
+
+3. RAJ2000					RAJ2000(unit degree)
+
+4. DEJ2000					DEJ2000(Unit degree)
+
+5. Variable					(1) 0: Not in VSX catalog
+						(2) 1: Variable
+						(3) 2: Suspected variable
+						(4) 3: Constant or non-existing
+						(5) 4: Possible duplicate
+
+6. Passband					Passband in VSX(include V R I Hp and etc.)
+
+7. max_mag					max mag of a variable star(if not a variable star, its value equal to vmag in BSC catalog)
+
+8. min_mag  					min mag of a variable star(if not a variable star, its value equal to vmag in BSC catalog)
+
+9. delta_mag					delta mag of a variable star
+
+10. s_flag					0: No spectra in Sophie
+						1: Have spectra in Sophie
+
+11. e_flag					0: No spectra in Elodies
+						1: Have spectra in Elodies
+
+12. t_flag					0: Not in TIC 
+						1: In TIC
+
+13. teff_flag					0: No teff
+						1: teff
+
+14. teff					if teff_flag==0:
+							teff=np.nan
+						else:
+							teff (unit K)
+
+15. flux					flux (unit Photons cm^-2 s^-1 A^-1)
+
+						  						
+
